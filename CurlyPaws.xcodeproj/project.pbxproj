@@ -15,6 +15,7 @@
 		739E01D62CB58933008C8BB6 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01D52CB58933008C8BB6 /* DogModel.swift */; };
 		739E01D82CB58957008C8BB6 /* DogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01D72CB58957008C8BB6 /* DogManager.swift */; };
 		739E01DA2CB589A9008C8BB6 /* DogDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01D92CB589A9008C8BB6 /* DogDataManager.swift */; };
+		739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		739E01D52CB58933008C8BB6 /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		739E01D72CB58957008C8BB6 /* DogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogManager.swift; sourceTree = "<group>"; };
 		739E01D92CB589A9008C8BB6 /* DogDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataManager.swift; sourceTree = "<group>"; };
+		739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				739E01C32CB55127008C8BB6 /* SceneDelegate.swift */,
 				739E01C52CB55127008C8BB6 /* ViewController.swift */,
 				739E01D52CB58933008C8BB6 /* DogModel.swift */,
+				739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */,
 				739E01D72CB58957008C8BB6 /* DogManager.swift */,
 				739E01D92CB589A9008C8BB6 /* DogDataManager.swift */,
 				739E01CA2CB55129008C8BB6 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				739E01D62CB58933008C8BB6 /* DogModel.swift in Sources */,
 				739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */,
 				739E01D82CB58957008C8BB6 /* DogManager.swift in Sources */,
+				739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */,
 				739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */,
 				739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */,
 			);
