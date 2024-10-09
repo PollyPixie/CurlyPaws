@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let textLabel = UILabel()
     private let imageView = UIImageView()
-    private let stackView = UIStackView()
+    private let textLabel = UILabel()
+    
     
     private let dogDataManager = DogDataManager(dogs: DogManager().getDogs())
     
@@ -19,10 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        setupLabel()
         setupImageView()
-        setupStackView()
-        view.addSubview(stackView)
+        setupLabel()
+        view.addSubview(imageView)
+        view.addSubview(textLabel)
+        
         setupLayout()
         
         updateView()
@@ -31,46 +32,42 @@ class ViewController: UIViewController {
     private func updateView() {
         let currentDog = dogDataManager.getCurrentDog()
         
-        textLabel.text = currentDog.description
         imageView.image = UIImage(named: currentDog.imageName)
+        textLabel.text = currentDog.description
     }
 }
-    
+
 // MARK: - Setup View
 private extension ViewController {
-    func setupLabel() {
-        textLabel.numberOfLines = 0
-        textLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        textLabel.textAlignment = .center
-        textLabel.textColor = .black
-    }
-    
     func setupImageView() {
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
     }
     
-    func setupStackView() {
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.alignment = .center
-       stackView.spacing = 20
-        
-        stackView.addArrangedSubview(imageView)
-        stackView.addArrangedSubview(textLabel)
-        
+    func setupLabel() {
+        textLabel.numberOfLines = 0
+        textLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        textLabel.textAlignment = .justified
+        textLabel.textColor = .black
     }
 }
-    // MARK: - Setup Layout
+// MARK: - Setup Layout
 extension ViewController {
-   func setupLayout() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-       
-       NSLayoutConstraint.activate([
-        stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-           stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-           stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
-       ])
+    func setupLayout() {
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            
+            textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40),
+            textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
+            textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60)
+        ])
     }
 }
