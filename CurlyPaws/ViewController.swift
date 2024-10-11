@@ -31,9 +31,11 @@ class ViewController: UIViewController {
         setupImageView()
         setupLabel()
         setupStackView()
-        setupLayout()
         
         updateView()
+        addAction()
+        
+        setupLayout()
     }
     
     private func updateView() {
@@ -44,8 +46,32 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Setup Action
+extension ViewController {
+    private func addAction() {
+        let lastAction = UIAction { _ in
+            self.dogDataManager.getLastDog()
+            self.updateView()
+        }
+        lastButton.addAction(lastAction, for: .touchUpInside)
+        
+        let nextAction = UIAction { _ in
+            self.dogDataManager.getNextDog()
+            self.updateView()
+        }
+        nextButton.addAction(nextAction, for: .touchUpInside)
+        
+        let firstAction = UIAction { _ in
+            self.dogDataManager.getFirstDog()
+            self.updateView()
+        }
+        firstButton.addAction(firstAction, for: .touchUpInside)
+    }
+}
+
 // MARK: - Setup View
 private extension ViewController {
+    
     func setupImageView() {
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true

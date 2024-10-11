@@ -20,22 +20,20 @@ class DogDataManager {
         dogs[currentIndex]
     }
     
-    func getNextDog() -> DogModel {
-        if currentIndex < dogs.count - 1 {
-            currentIndex += 1
-        }
-        return getCurrentDog()
-    }
-    
-    func getLastDog() -> DogModel {
+    func getLastDog() {
         if currentIndex > 0 {
             currentIndex -= 1
         }
-        return getCurrentDog()
     }
     
-    func getFirstDog() -> DogModel? {
-        dogs.first
+    func getNextDog() {
+        if currentIndex < dogs.count - 1 {
+            currentIndex += 1
         }
     }
+    
+    func getFirstDog() {
+        currentIndex = 0
+    }
+}
 

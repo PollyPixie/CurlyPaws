@@ -6,7 +6,6 @@
 //
 import UIKit
 
-// Custom Button Class
 class CustomButton: UIButton {
     private var shouldHaveShadow: Bool
     
