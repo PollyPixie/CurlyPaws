@@ -64,16 +64,56 @@
 			children = (
 				739E01C12CB55127008C8BB6 /* AppDelegate.swift */,
 				739E01C32CB55127008C8BB6 /* SceneDelegate.swift */,
-				739E01C52CB55127008C8BB6 /* ViewController.swift */,
-				739E01D52CB58933008C8BB6 /* DogModel.swift */,
-				739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */,
-				739E01D72CB58957008C8BB6 /* DogManager.swift */,
-				739E01D92CB589A9008C8BB6 /* DogDataManager.swift */,
-				739E01CA2CB55129008C8BB6 /* Assets.xcassets */,
-				739E01CC2CB55129008C8BB6 /* LaunchScreen.storyboard */,
+				739E01DD2CB9489A008C8BB6 /* Controllers */,
+				739E01DE2CB948C3008C8BB6 /* Models */,
+				739E01E12CB94948008C8BB6 /* Managers */,
+				739E01DF2CB948EF008C8BB6 /* CustomElements */,
+				739E01E02CB9491B008C8BB6 /* Resources */,
 				739E01CF2CB55129008C8BB6 /* Info.plist */,
 			);
 			path = CurlyPaws;
+			sourceTree = "<group>";
+		};
+		739E01DD2CB9489A008C8BB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				739E01C52CB55127008C8BB6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		739E01DE2CB948C3008C8BB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				739E01D52CB58933008C8BB6 /* DogModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		739E01DF2CB948EF008C8BB6 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		739E01E02CB9491B008C8BB6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				739E01CA2CB55129008C8BB6 /* Assets.xcassets */,
+				739E01CC2CB55129008C8BB6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		739E01E12CB94948008C8BB6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				739E01D72CB58957008C8BB6 /* DogManager.swift */,
+				739E01D92CB589A9008C8BB6 /* DogDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
