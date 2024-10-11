@@ -16,6 +16,8 @@
 		739E01D82CB58957008C8BB6 /* DogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01D72CB58957008C8BB6 /* DogManager.swift */; };
 		739E01DA2CB589A9008C8BB6 /* DogDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01D92CB589A9008C8BB6 /* DogDataManager.swift */; };
 		739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */; };
+		739E01E32CB95524008C8BB6 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01E22CB95524008C8BB6 /* ShadowView.swift */; };
+		739E01E52CB95F62008C8BB6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01E42CB95F62008C8BB6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		739E01D72CB58957008C8BB6 /* DogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogManager.swift; sourceTree = "<group>"; };
 		739E01D92CB589A9008C8BB6 /* DogDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataManager.swift; sourceTree = "<group>"; };
 		739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		739E01E22CB95524008C8BB6 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		739E01E42CB95F62008C8BB6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +97,9 @@
 		739E01DF2CB948EF008C8BB6 /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
+				739E01E22CB95524008C8BB6 /* ShadowView.swift */,
 				739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */,
+				739E01E42CB95F62008C8BB6 /* Constants.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -190,9 +196,11 @@
 				739E01D62CB58933008C8BB6 /* DogModel.swift in Sources */,
 				739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */,
 				739E01D82CB58957008C8BB6 /* DogManager.swift in Sources */,
+				739E01E32CB95524008C8BB6 /* ShadowView.swift in Sources */,
 				739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */,
 				739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */,
 				739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */,
+				739E01E52CB95F62008C8BB6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

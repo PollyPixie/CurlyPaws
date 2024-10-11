@@ -4,6 +4,7 @@
 //
 //  Created by Полина Соколова on 09.10.24.
 //
+
 import UIKit
 
 class CustomButton: UIButton {
@@ -42,19 +43,10 @@ extension CustomButton {
         heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         if shouldHaveShadow {
-            layer.shadowColor = UIColor.gray.cgColor
-            layer.shadowOffset = CGSize(width: 0, height: 10)
+            layer.shadowColor = Constants.shadowColor
+            layer.shadowOffset = Constants.shadowOffset
             layer.shadowOpacity = Constants.shadowOpacity
             layer.shadowRadius = Constants.shadowRadius
         }
-    }
-}
-
-// MARK: - Constants
-extension CustomButton {
-    private enum Constants {
-        static let cornerRadius: CGFloat = 10
-        static let shadowOpacity: Float = 0.7
-        static let shadowRadius: CGFloat = 10
     }
 }

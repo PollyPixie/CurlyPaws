@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     private let dogDataManager = DogDataManager(dogs: DogManager().getDogs())
-    
-    private let imageView = UIImageView()
+   
+    private let shadowView = ShadowView(imageName: "toyPoodle")
     private let textLabel = UILabel()
     private let stackView = UIStackView()
     
@@ -23,25 +23,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        view.addSubview(imageView)
+        view.addSubview(shadowView)
         view.addSubview(textLabel)
         view.addSubview(stackView)
         view.addSubview(firstButton)
-        
-        setupImageView()
         setupLabel()
         setupStackView()
-        
         updateView()
         addAction()
-        
         setupLayout()
     }
     
     private func updateView() {
         let currentDog = dogDataManager.getCurrentDog()
-        
-        imageView.image = UIImage(named: currentDog.imageName)
+        shadowView.updateImageName(imageName: currentDog.imageName)
         textLabel.text = currentDog.description
     }
 }
@@ -71,14 +66,7 @@ extension ViewController {
 
 // MARK: - Setup View
 private extension ViewController {
-    
-    func setupImageView() {
-        imageView.layer.cornerRadius = 20
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFill
-    }
-    
-    func setupLabel() {
+   func setupLabel() {
         textLabel.numberOfLines = 0
         textLabel.font = .systemFont(ofSize: 16, weight: .regular)
         textLabel.textAlignment = .justified
@@ -99,23 +87,23 @@ private extension ViewController {
 // MARK: - Setup Layout
 extension ViewController {
     private func setupLayout() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        shadowView.translatesAutoresizingMaskIntoConstraints = false
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         firstButton.translatesAutoresizingMaskIntoConstraints = false
         
         
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            shadowView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            shadowView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            shadowView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
+            shadowView.heightAnchor.constraint(equalTo: shadowView.widthAnchor),
             
-            textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40),
+            textLabel.topAnchor.constraint(equalTo: shadowView.bottomAnchor, constant: 40),
             textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
             textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
             textLabel.heightAnchor.constraint(equalToConstant: 100),
-
+            
             stackView.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 70),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
