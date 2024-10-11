@@ -98,7 +98,7 @@ private extension ViewController {
 }
 // MARK: - Setup Layout
 extension ViewController {
-    func setupLayout() {
+    private func setupLayout() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -114,7 +114,8 @@ extension ViewController {
             textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40),
             textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
             textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-            
+            textLabel.heightAnchor.constraint(equalToConstant: 100),
+
             stackView.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 70),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
