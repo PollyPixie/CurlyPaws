@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let dogDataManager = DogDataManager(dogs: DogManager().getDogs())
+    var dogDataManager: DogDataManageable?
    
     private let shadowView = ShadowView(imageName: "toyPoodle")
     private let textLabel = UILabel()
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     private func updateView() {
-        let currentDog = dogDataManager.getCurrentDog()
+        guard let currentDog = dogDataManager?.getCurrentDog() else { return }
         shadowView.updateImageName(imageName: currentDog.imageName)
         textLabel.text = currentDog.description
     }
@@ -45,19 +45,19 @@ class ViewController: UIViewController {
 extension ViewController {
     private func addAction() {
         let lastAction = UIAction { _ in
-            self.dogDataManager.getLastDog()
+            self.dogDataManager?.getLastDog()
             self.updateView()
         }
         lastButton.addAction(lastAction, for: .touchUpInside)
         
         let nextAction = UIAction { _ in
-            self.dogDataManager.getNextDog()
+            self.dogDataManager?.getNextDog()
             self.updateView()
         }
         nextButton.addAction(nextAction, for: .touchUpInside)
         
         let firstAction = UIAction { _ in
-            self.dogDataManager.getFirstDog()
+            self.dogDataManager?.getFirstDog()
             self.updateView()
         }
         firstButton.addAction(firstAction, for: .touchUpInside)
