@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     private func updateView() {
         guard let currentDog = dogDataManager?.getCurrentDog() else { return }
         shadowView.updateImageName(imageName: currentDog.imageName)
-        textLabel.text = currentDog.description
+        textLabel.text = currentDog.dogDescription
     }
 }
 
