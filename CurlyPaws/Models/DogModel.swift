@@ -7,15 +7,21 @@
 
 import Foundation
 
-struct DogModel: Comparable, CustomStringConvertible {
+struct DogModel {
     let imageName: String
     let dogDescription: String
-    
-    var description: String {
-            "Название картинки: \(imageName), описание: \(dogDescription)"
-        }
+}
 
+// MARK: - Comparable
+extension DogModel: Comparable {
     static func < (lhs: DogModel, rhs: DogModel) -> Bool {
         lhs.imageName < rhs.imageName
+    }
+}
+
+// MARK: - CustomStringConvertible
+extension DogModel: CustomStringConvertible {
+    var description: String {
+        "Название картинки: \(imageName), описание: \(dogDescription)"
     }
 }

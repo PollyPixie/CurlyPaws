@@ -7,13 +7,20 @@
 
 import UIKit
 
+@objc protocol ICustomButtonDelegate {
+    func pressedButton(_ button: CustomButton)
+}
+
 class CustomButton: UIButton {
+    
     private var shouldHaveShadow: Bool
+    var delegate: ICustomButtonDelegate?
     
     init(title: String, backgroundColor: UIColor, titleColor: UIColor, shouldHaveShadow: Bool) {
         self.shouldHaveShadow = shouldHaveShadow
         super.init(frame: .zero)
         setupButton(title: title, backgroundColor: backgroundColor, titleColor: titleColor)
+        addAction()
     }
     
     @available(*, unavailable)
@@ -27,6 +34,13 @@ class CustomButton: UIButton {
             let shadowPath = UIBezierPath(rect: bounds)
             layer.shadowPath = shadowPath.cgPath
         }
+    }
+    
+    private func addAction() {
+        let action = UIAction { _ in
+            self.delegate?.pressedButton(self)
+        }
+        addAction(action, for: .touchUpInside)
     }
 }
 

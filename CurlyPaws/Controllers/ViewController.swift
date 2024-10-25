@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ICustomButtonDelegate {
     
     var dogDataManager: DogDataManageable?
    
@@ -21,6 +21,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastButton.delegate = self
+        nextButton.delegate = self
+        firstButton.delegate = self
+        
         view.backgroundColor = .white
         
         view.addSubview(shadowView)
@@ -30,7 +34,6 @@ class ViewController: UIViewController {
         setupLabel()
         setupStackView()
         updateView()
-        addAction()
         setupLayout()
     }
     
@@ -43,24 +46,15 @@ class ViewController: UIViewController {
 
 // MARK: - Setup Action
 extension ViewController {
-    private func addAction() {
-        let lastAction = UIAction { _ in
-            self.dogDataManager?.getLastDog()
-            self.updateView()
+    func pressedButton(_ button: CustomButton) {
+        if button == lastButton {
+            dogDataManager?.getLastDog()
+        } else if button == nextButton {
+            dogDataManager?.getNextDog()
+        } else if button == firstButton {
+            dogDataManager?.getFirstDog()
         }
-        lastButton.addAction(lastAction, for: .touchUpInside)
-        
-        let nextAction = UIAction { _ in
-            self.dogDataManager?.getNextDog()
-            self.updateView()
-        }
-        nextButton.addAction(nextAction, for: .touchUpInside)
-        
-        let firstAction = UIAction { _ in
-            self.dogDataManager?.getFirstDog()
-            self.updateView()
-        }
-        firstButton.addAction(firstAction, for: .touchUpInside)
+        updateView()
     }
 }
 
