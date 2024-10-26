@@ -7,11 +7,12 @@
 
 import UIKit
 
-@objc protocol ICustomButtonDelegate {
+protocol ICustomButtonDelegate {
     func pressedButton(_ button: CustomButton)
 }
 
 class CustomButton: UIButton {
+    var buttonNameInstance: String?
     
     private var shouldHaveShadow: Bool
     var delegate: ICustomButtonDelegate?

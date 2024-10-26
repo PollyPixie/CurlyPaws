@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ICustomButtonDelegate {
+class ViewController: UIViewController {
     
     var dogDataManager: DogDataManageable?
    
@@ -24,9 +24,15 @@ class ViewController: UIViewController, ICustomButtonDelegate {
         lastButton.delegate = self
         nextButton.delegate = self
         firstButton.delegate = self
+        lastButton.buttonNameInstance = "Last Button"
+        nextButton.buttonNameInstance = "Next Button"
+        firstButton.buttonNameInstance = "First Button"
+        shadowView.viewNameInstance = "Shadow View for Dog"
+        
+        print("Количество кнопок: \(view.countButtons(lastButton, nextButton, firstButton))")
+        view.printViewNames(lastButton, nextButton, firstButton, shadowView)
         
         view.backgroundColor = .white
-        
         view.addSubview(shadowView)
         view.addSubview(textLabel)
         view.addSubview(stackView)
@@ -44,8 +50,8 @@ class ViewController: UIViewController, ICustomButtonDelegate {
     }
 }
 
-// MARK: - Setup Action
-extension ViewController {
+// MARK: - ICustomButtonDelegate
+extension ViewController: ICustomButtonDelegate {
     func pressedButton(_ button: CustomButton) {
         if button == lastButton {
             dogDataManager?.getLastDog()
@@ -104,8 +110,7 @@ extension ViewController {
             
             firstButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
             firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            firstButton.widthAnchor.constraint(equalToConstant: 100),
-            firstButton.heightAnchor.constraint(equalToConstant: 50)
+            firstButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
 }

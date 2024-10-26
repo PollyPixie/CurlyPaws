@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7371B9AD2CCBE1BA00853BDB /* UIView+print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9AC2CCBE1BA00853BDB /* UIView+print.swift */; };
 		739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C12CB55127008C8BB6 /* AppDelegate.swift */; };
 		739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C32CB55127008C8BB6 /* SceneDelegate.swift */; };
 		739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C52CB55127008C8BB6 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7371B9AC2CCBE1BA00853BDB /* UIView+print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+print.swift"; sourceTree = "<group>"; };
 		739E01BE2CB55127008C8BB6 /* CurlyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurlyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739E01C12CB55127008C8BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739E01C32CB55127008C8BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7371B9AB2CCBE17300853BDB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7371B9AC2CCBE1BA00853BDB /* UIView+print.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		739E01B52CB55127008C8BB6 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 				739E01DE2CB948C3008C8BB6 /* Models */,
 				739E01E12CB94948008C8BB6 /* Managers */,
 				739E01DF2CB948EF008C8BB6 /* CustomElements */,
+				7371B9AB2CCBE17300853BDB /* Extensions */,
 				739E01E02CB9491B008C8BB6 /* Resources */,
 				739E01CF2CB55129008C8BB6 /* Info.plist */,
 			);
@@ -196,6 +207,7 @@
 				739E01D62CB58933008C8BB6 /* DogModel.swift in Sources */,
 				739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */,
 				739E01D82CB58957008C8BB6 /* DogManager.swift in Sources */,
+				7371B9AD2CCBE1BA00853BDB /* UIView+print.swift in Sources */,
 				739E01E32CB95524008C8BB6 /* ShadowView.swift in Sources */,
 				739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */,
 				739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */,
