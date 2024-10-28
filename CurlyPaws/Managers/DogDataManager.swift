@@ -17,14 +17,17 @@ protocol DogDataManageable {
     func getFirstDog()
 }
 
-class DogDataManager: DogDataManageable {
-    
+class DogDataManager { 
     var dogs: [DogModel] = []
     var currentIndex = 0
     
     init(dogs: [DogModel]) {
         self.dogs = dogs
     }
+}
+
+// MARK: - DogProvidable
+extension DogDataManager: DogDataManageable {
     
     func getCurrentDog() -> DogModel {
         dogs[currentIndex]

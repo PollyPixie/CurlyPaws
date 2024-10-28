@@ -21,26 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lastButton.delegate = self
-        nextButton.delegate = self
-        firstButton.delegate = self
-        lastButton.buttonNameInstance = "Last Button"
-        nextButton.buttonNameInstance = "Next Button"
-        firstButton.buttonNameInstance = "First Button"
-        shadowView.viewNameInstance = "Shadow View for Dog"
-        
-        print("Количество кнопок: \(view.countButtons(lastButton, nextButton, firstButton))")
-        view.printViewNames(lastButton, nextButton, firstButton, shadowView)
-        
-        view.backgroundColor = .white
-        view.addSubview(shadowView)
-        view.addSubview(textLabel)
-        view.addSubview(stackView)
-        view.addSubview(firstButton)
-        setupLabel()
-        setupStackView()
-        updateView()
-        setupLayout()
+        setupView()
     }
     
     private func updateView() {
@@ -65,6 +46,40 @@ extension ViewController: ICustomButtonDelegate {
 }
 
 // MARK: - Setup View
+private extension ViewController {
+    func setupView() {
+        view.backgroundColor = .white
+        view.printViewNames(lastButton, nextButton, firstButton, shadowView)
+        
+        addSubViews()
+        setupLabel()
+        setupStackView()
+        setupButtons()
+        updateView()
+        setupLayout()
+    }
+    
+    func addSubViews() {
+        view.addSubview(shadowView)
+        view.addSubview(textLabel)
+        view.addSubview(stackView)
+        view.addSubview(firstButton)
+    }
+    
+    func setupButtons() {
+        lastButton.delegate = self
+        nextButton.delegate = self
+        firstButton.delegate = self
+        lastButton.buttonNameInstance = "Last Button"
+        nextButton.buttonNameInstance = "Next Button"
+        firstButton.buttonNameInstance = "First Button"
+        shadowView.viewNameInstance = "Shadow View for Dog"
+        
+        print("Количество кнопок: \(view.countButtons(lastButton, nextButton, firstButton))")
+    }
+}
+
+// MARK: - Setup View Elements
 private extension ViewController {
    func setupLabel() {
         textLabel.numberOfLines = 0

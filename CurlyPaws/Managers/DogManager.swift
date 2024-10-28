@@ -11,8 +11,10 @@ protocol DogProvidable {
     func getDogs() -> [DogModel]
 }
 
-class DogManager: DogProvidable {
-    
+class DogManager { }
+
+// MARK: - DogProvidable
+extension DogManager: DogProvidable {
     func getDogs() -> [DogModel] {
         [
             DogModel(
