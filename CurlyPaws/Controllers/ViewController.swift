@@ -13,17 +13,44 @@ class ViewController: UIViewController {
    
     private let shadowView = ShadowView(imageName: "toyPoodle")
     private let textLabel = UILabel()
+    private let descriptionLabel = UILabel()
     private let stackView = UIStackView()
     
     private let lastButton = CustomButton(title: "Last", backgroundColor: .systemCyan, titleColor: .white, shouldHaveShadow: true)
     private let nextButton = CustomButton(title: "Next", backgroundColor: .white, titleColor: .black, shouldHaveShadow: true)
     private let firstButton = CustomButton(title: "First", backgroundColor: .systemPink, titleColor: .white, shouldHaveShadow: false)
     
+    private var isShowingDescription = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
+    // MARK: - Touches Began
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let currentDog = dogDataManager?.getCurrentDog() else { return }
+        
+        if let touch = touches.first {
+            let location = touch.location(in: view)
+            
+            if shadowView.frame.contains(location) {
+                descriptionLabel.text = "This cute dog: \(currentDog.imageName)"
+                descriptionLabel.isHidden = false
+                isShowingDescription = false
+            } else {
+                if isShowingDescription {
+                    textLabel.text = currentDog.dogDescription
+                } else {
+                    textLabel.text = "Meet this lovely dog: \(currentDog.imageName)"
+                }
+                isShowingDescription.toggle()
+            }
+        }
+        super.touchesBegan(touches, with: event)
+    }
+    
+    // MARK: - Update View
     private func updateView() {
         guard let currentDog = dogDataManager?.getCurrentDog() else { return }
         shadowView.updateImageName(imageName: currentDog.imageName)
@@ -42,6 +69,8 @@ extension ViewController: ICustomButtonDelegate {
             dogDataManager?.getFirstDog()
         }
         updateView()
+        
+        descriptionLabel.isHidden = true
     }
 }
 
@@ -53,6 +82,7 @@ private extension ViewController {
         
         addSubViews()
         setupLabel()
+        setupDescriptionLabel()
         setupStackView()
         setupButtons()
         updateView()
@@ -62,6 +92,7 @@ private extension ViewController {
     func addSubViews() {
         view.addSubview(shadowView)
         view.addSubview(textLabel)
+        view.addSubview(descriptionLabel)
         view.addSubview(stackView)
         view.addSubview(firstButton)
     }
@@ -88,6 +119,14 @@ private extension ViewController {
         textLabel.textColor = .black
     }
     
+    func setupDescriptionLabel() {
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        descriptionLabel.textAlignment = .center
+        descriptionLabel.textColor = .gray
+        descriptionLabel.isHidden = true
+    }
+    
     func setupStackView() {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -102,11 +141,7 @@ private extension ViewController {
 // MARK: - Setup Layout
 extension ViewController {
     private func setupLayout() {
-        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        firstButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        view.disableAutoresizingMasks(for: shadowView, textLabel, stackView, firstButton, descriptionLabel)
         
         NSLayoutConstraint.activate([
             shadowView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -125,7 +160,10 @@ extension ViewController {
             
             firstButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
             firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            firstButton.widthAnchor.constraint(equalToConstant: 100)
+            firstButton.widthAnchor.constraint(equalToConstant: 100),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
+            descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
