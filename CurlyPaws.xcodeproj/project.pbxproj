@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7371B9AD2CCBE1BA00853BDB /* UIView+print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9AC2CCBE1BA00853BDB /* UIView+print.swift */; };
 		7371B9B12CD40B9A00853BDB /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9B02CD40B9A00853BDB /* UIView+Constraints.swift */; };
+		7371B9B52CD91B0F00853BDB /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9B42CD91B0F00853BDB /* FindImageViewController.swift */; };
 		739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C12CB55127008C8BB6 /* AppDelegate.swift */; };
 		739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C32CB55127008C8BB6 /* SceneDelegate.swift */; };
 		739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C52CB55127008C8BB6 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		7371B9AC2CCBE1BA00853BDB /* UIView+print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+print.swift"; sourceTree = "<group>"; };
 		7371B9B02CD40B9A00853BDB /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		7371B9B42CD91B0F00853BDB /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
 		739E01BE2CB55127008C8BB6 /* CurlyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurlyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739E01C12CB55127008C8BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739E01C32CB55127008C8BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				739E01C52CB55127008C8BB6 /* ViewController.swift */,
+				7371B9B42CD91B0F00853BDB /* FindImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				7371B9AD2CCBE1BA00853BDB /* UIView+print.swift in Sources */,
 				739E01E32CB95524008C8BB6 /* ShadowView.swift in Sources */,
 				739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */,
+				7371B9B52CD91B0F00853BDB /* FindImageViewController.swift in Sources */,
 				739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */,
 				739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */,
 				7371B9B12CD40B9A00853BDB /* UIView+Constraints.swift in Sources */,

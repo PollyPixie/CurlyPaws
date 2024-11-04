@@ -24,6 +24,15 @@ class DogDataManager {
     init(dogs: [DogModel]) {
         self.dogs = dogs
     }
+    
+    func findImage(by name: String) -> DogModel? {
+        for dog in dogs {
+            if dog.imageName == name {
+                return dog
+            }
+        }
+        return nil
+    }
 }
 
 // MARK: - DogProvidable

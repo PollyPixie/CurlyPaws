@@ -22,6 +22,6 @@ extension DogModel: Comparable {
 // MARK: - CustomStringConvertible
 extension DogModel: CustomStringConvertible {
     var description: String {
-        "Название картинки: \(imageName), описание: \(dogDescription)"
+        "\(dogDescription)"
     }
 }

@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let dogDataManager = DogDataManager(dogs: dogs)
         printDogsInfo(dogs: dogs)
         
-        let viewController = ViewController()
-        viewController.dogDataManager = dogDataManager
+        let findImageViewController = FindImageViewController()
+        findImageViewController.dogDataManager = dogDataManager
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = viewController
+        window?.rootViewController = findImageViewController
         window?.makeKeyAndVisible()
     }
     
