@@ -20,8 +20,6 @@ class ViewController: UIViewController {
     private let nextButton = CustomButton(title: "Next", backgroundColor: .white, titleColor: .black, shouldHaveShadow: true)
     private let firstButton = CustomButton(title: "First", backgroundColor: .systemPink, titleColor: .white, shouldHaveShadow: false)
     
-    private var isShowingDescription = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -37,14 +35,8 @@ class ViewController: UIViewController {
             if shadowView.frame.contains(location) {
                 descriptionLabel.text = "This cute dog: \(currentDog.imageName)"
                 descriptionLabel.isHidden = false
-                isShowingDescription = false
             } else {
-                if isShowingDescription {
-                    textLabel.text = currentDog.dogDescription
-                } else {
-                    textLabel.text = "Meet this lovely dog: \(currentDog.imageName)"
-                }
-                isShowingDescription.toggle()
+                textLabel.text = "Meet this lovely dog: \(currentDog.imageName)"
             }
         }
         super.touchesBegan(touches, with: event)
@@ -141,7 +133,13 @@ private extension ViewController {
 // MARK: - Setup Layout
 extension ViewController {
     private func setupLayout() {
-        view.disableAutoresizingMasks(for: shadowView, textLabel, stackView, firstButton, descriptionLabel)
+        view.disableAutoresizingMasks(
+            for: shadowView,
+            textLabel,
+            stackView,
+            firstButton,
+            descriptionLabel
+        )
         
         NSLayoutConstraint.activate([
             shadowView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
