@@ -11,7 +11,7 @@ class PanImageViewController: UIViewController {
     
     var dogDataManager: DogDataManager?
     
-    private let imageView = UIImageView(image: UIImage(named: "toyPoodle"))
+    private let imageView = ShadowView(imageName: "toyPoodle")
     private let panGestureRecognizer = UIPanGestureRecognizer()
     private var panGestureAnchorPoint: CGPoint?
     
