@@ -15,16 +15,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        let textManager = LicenseTextManager()
+        
         let dogManager = DogManager()
         let dogs = dogManager.getDogs().sorted(by: <)
         let dogDataManager = DogDataManager(dogs: dogs)
         printDogsInfo(dogs: dogs)
         
-        let panImageViewController = PanImageViewController()
-        panImageViewController.dogDataManager = dogDataManager
+        let licenseAgreementViewController = LicenseAgreementViewController()
+        licenseAgreementViewController.textManager = textManager
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = panImageViewController
+        window?.rootViewController = licenseAgreementViewController
         window?.makeKeyAndVisible()
     }
     
