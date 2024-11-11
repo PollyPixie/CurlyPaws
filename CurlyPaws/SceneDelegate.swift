@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let dogManager = DogManager()
         let dogs = dogManager.getDogs().sorted(by: <)
-        let dogDataManager = DogDataManager(dogs: dogs)
+        //let dogDataManager = DogDataManager(dogs: dogs)
         printDogsInfo(dogs: dogs)
         
         let licenseAgreementViewController = LicenseAgreementViewController()

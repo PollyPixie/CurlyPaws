@@ -12,6 +12,7 @@ class LicenseAgreementViewController: UIViewController {
     var textManager: TextManageable?
     
     private let scrollView = UIScrollView()
+    private let contentView = UIView()
     private let titleLabel = UILabel()
     private let agreementTextLabel = UILabel()
     
@@ -30,6 +31,7 @@ private extension LicenseAgreementViewController {
         addSubViews()
         
         setupScrollView()
+        setupContentView()
         setupTitleLabel()
         setupAgreementTextLabel()
         setupLayout()
@@ -37,8 +39,9 @@ private extension LicenseAgreementViewController {
     
     func addSubViews() {
         view.addSubview(scrollView)
-        scrollView.addSubview(titleLabel)
-        scrollView.addSubview(agreementTextLabel)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(agreementTextLabel)
     }
     
     func setupScrollView() {
@@ -49,6 +52,10 @@ private extension LicenseAgreementViewController {
         scrollView.layer.borderColor = UIColor(red: 0.14, green: 0.26, blue: 0.37, alpha: 0.9).cgColor
         scrollView.alpha = 0.9
     }
+    
+    func setupContentView() {
+            contentView.backgroundColor = .clear
+        }
     
     func setupTitleLabel() {
         titleLabel.text = textManager?.getTitle()
@@ -71,6 +78,7 @@ extension LicenseAgreementViewController {
     private func setupLayout() {
         view.disableAutoresizingMasks(
             for: scrollView,
+            contentView,
             titleLabel,
             agreementTextLabel
         )
@@ -81,14 +89,20 @@ extension LicenseAgreementViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             
-            titleLabel.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 20),
-            titleLabel.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            titleLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -40),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            titleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -40),
             
             agreementTextLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            agreementTextLabel.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            agreementTextLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -40),
-            agreementTextLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20)
+            agreementTextLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            agreementTextLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -40),
+            agreementTextLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
     }
 }

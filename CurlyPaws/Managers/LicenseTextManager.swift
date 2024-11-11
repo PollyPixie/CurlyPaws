@@ -14,11 +14,11 @@ protocol TextManageable {
 
 class LicenseTextManager: TextManageable {
     func getTitle() -> String {
-        return "LICENSED APPLICATION END USER LICENSE AGREEMENT"
+        "LICENSED APPLICATION END USER LICENSE AGREEMENT"
     }
     
     func getAgreementText() -> String {
-        return """
+        """
             Apps made available through the App Store are licensed, not sold, to you.
             Your license to each App is subject to your prior acceptance of either this
             Licensed Application End User License Agreement (“Standard EULA”),
