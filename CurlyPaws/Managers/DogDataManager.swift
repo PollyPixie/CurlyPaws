@@ -8,13 +8,14 @@
 import Foundation
 
 protocol DogDataManageable {
-    var dogs: [DogModel] { get }
+    var dogs: [DogModel] { get set }
     var currentIndex: Int { get set }
     
     func getCurrentDog() -> DogModel
     func getLastDog()
     func getNextDog()
     func getFirstDog()
+    func toggleMark(at index: Int)
 }
 
 class DogDataManager { 
@@ -56,6 +57,10 @@ extension DogDataManager: DogDataManageable {
     
     func getFirstDog() {
         currentIndex = 0
+    }
+    
+    func toggleMark(at index: Int) {
+        dogs[index].isMark.toggle()
     }
 }
 

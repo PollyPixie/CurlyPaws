@@ -13,6 +13,7 @@
 		7371B9B72CDBA3E100853BDB /* PanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9B62CDBA3E100853BDB /* PanImageViewController.swift */; };
 		7371B9B92CDCC9C600853BDB /* LicenseAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9B82CDCC9C600853BDB /* LicenseAgreementViewController.swift */; };
 		7371B9BB2CDCCCDC00853BDB /* LicenseTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9BA2CDCCCDC00853BDB /* LicenseTextManager.swift */; };
+		7371BA072CE5270600853BDB /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA062CE5270600853BDB /* ImageListViewController.swift */; };
 		739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C12CB55127008C8BB6 /* AppDelegate.swift */; };
 		739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C32CB55127008C8BB6 /* SceneDelegate.swift */; };
 		739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C52CB55127008C8BB6 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		7371B9B62CDBA3E100853BDB /* PanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanImageViewController.swift; sourceTree = "<group>"; };
 		7371B9B82CDCC9C600853BDB /* LicenseAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreementViewController.swift; sourceTree = "<group>"; };
 		7371B9BA2CDCCCDC00853BDB /* LicenseTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseTextManager.swift; sourceTree = "<group>"; };
+		7371BA062CE5270600853BDB /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		739E01BE2CB55127008C8BB6 /* CurlyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurlyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739E01C12CB55127008C8BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739E01C32CB55127008C8BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		739E01DD2CB9489A008C8BB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7371BA062CE5270600853BDB /* ImageListViewController.swift */,
 				739E01C52CB55127008C8BB6 /* ViewController.swift */,
 				7371B9B42CD91B0F00853BDB /* FindImageViewController.swift */,
 				7371B9B62CDBA3E100853BDB /* PanImageViewController.swift */,
@@ -224,6 +227,7 @@
 				7371B9B92CDCC9C600853BDB /* LicenseAgreementViewController.swift in Sources */,
 				7371B9BB2CDCCCDC00853BDB /* LicenseTextManager.swift in Sources */,
 				739E01D82CB58957008C8BB6 /* DogManager.swift in Sources */,
+				7371BA072CE5270600853BDB /* ImageListViewController.swift in Sources */,
 				7371B9AD2CCBE1BA00853BDB /* UIView+print.swift in Sources */,
 				739E01E32CB95524008C8BB6 /* ShadowView.swift in Sources */,
 				7371B9B72CDBA3E100853BDB /* PanImageViewController.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 struct DogModel {
     let imageName: String
     let dogDescription: String
+    var isMark: Bool = false
 }
 
 // MARK: - Comparable
