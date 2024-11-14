@@ -9,7 +9,7 @@ import UIKit
 
 class PanImageViewController: UIViewController {
     
-    var dogDataManager: DogDataManager?
+    var dogDataManager: IDogDataManageable?
     
     private let imageView = ShadowView(imageName: "toyPoodle")
     private let panGestureRecognizer = UIPanGestureRecognizer()

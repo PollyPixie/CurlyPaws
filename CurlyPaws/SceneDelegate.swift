@@ -27,10 +27,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     
-    private func createDogDataManager() -> DogDataManager {
+    private func createDogDataManager() -> IDogDataManageable {
         let dogManager = DogManager()
         let dogs = dogManager.getDogs().sorted(by: <)
-        let dogDataManager = DogDataManager(dogs: dogs)
+        let dogDataManager: IDogDataManageable = DogDataManager(dogs: dogs)
         return dogDataManager
     }
     

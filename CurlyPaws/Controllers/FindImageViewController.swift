@@ -9,7 +9,7 @@ import UIKit
 
 class FindImageViewController: UIViewController {
     
-    var dogDataManager: DogDataManager?
+    var dogDataManager: IDogDataManageable?
     
     private let label = UILabel()
     private let textField = UITextField()

@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol TextManageable {
+protocol ITextManageable {
     func getTitle() -> String
     func getAgreementText() -> String
 }
 
-class LicenseTextManager: TextManageable {
+class LicenseTextManager: ITextManageable {
     func getTitle() -> String {
         "LICENSED APPLICATION END USER LICENSE AGREEMENT"
     }

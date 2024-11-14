@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DogDataManageable {
+protocol IDogDataManageable {
     var dogs: [DogModel] { get set }
     var currentIndex: Int { get set }
     
@@ -15,6 +15,7 @@ protocol DogDataManageable {
     func getLastDog()
     func getNextDog()
     func getFirstDog()
+    func findImage(by name: String) -> DogModel?
     func toggleMark(at index: Int)
 }
 
@@ -37,7 +38,7 @@ class DogDataManager {
 }
 
 // MARK: - DogProvidable
-extension DogDataManager: DogDataManageable {
+extension DogDataManager: IDogDataManageable {
     
     func getCurrentDog() -> DogModel {
         dogs[currentIndex]

@@ -9,7 +9,7 @@ import UIKit
 
 class LicenseAgreementViewController: UIViewController {
     
-    var textManager: TextManageable?
+    var textManager: ITextManageable?
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()

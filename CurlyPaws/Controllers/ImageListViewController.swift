@@ -9,7 +9,7 @@ import UIKit
 
 class ImageListViewController: UIViewController {
     
-    var dogDataManager: DogDataManageable?
+    var dogDataManager: IDogDataManageable?
     
     private let tableView = UITableView()
     private let cellIdentifier = "cellIdentifier"

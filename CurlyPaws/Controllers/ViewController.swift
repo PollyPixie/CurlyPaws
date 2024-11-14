@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var dogDataManager: DogDataManageable?
+    var dogDataManager: IDogDataManageable?
    
     private let shadowView = ShadowView(imageName: "toyPoodle")
     private let textLabel = UILabel()
