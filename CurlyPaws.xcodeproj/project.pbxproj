@@ -14,6 +14,8 @@
 		7371B9B92CDCC9C600853BDB /* LicenseAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9B82CDCC9C600853BDB /* LicenseAgreementViewController.swift */; };
 		7371B9BB2CDCCCDC00853BDB /* LicenseTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371B9BA2CDCCCDC00853BDB /* LicenseTextManager.swift */; };
 		7371BA072CE5270600853BDB /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA062CE5270600853BDB /* ImageListViewController.swift */; };
+		7371BA092CE6118000853BDB /* MarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA082CE6118000853BDB /* MarTableViewController.swift */; };
+		7371BA0B2CE621A000853BDB /* CustomDogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA0A2CE621A000853BDB /* CustomDogCell.swift */; };
 		739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C12CB55127008C8BB6 /* AppDelegate.swift */; };
 		739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C32CB55127008C8BB6 /* SceneDelegate.swift */; };
 		739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C52CB55127008C8BB6 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 		7371B9B82CDCC9C600853BDB /* LicenseAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreementViewController.swift; sourceTree = "<group>"; };
 		7371B9BA2CDCCCDC00853BDB /* LicenseTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseTextManager.swift; sourceTree = "<group>"; };
 		7371BA062CE5270600853BDB /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		7371BA082CE6118000853BDB /* MarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarTableViewController.swift; sourceTree = "<group>"; };
+		7371BA0A2CE621A000853BDB /* CustomDogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDogCell.swift; sourceTree = "<group>"; };
 		739E01BE2CB55127008C8BB6 /* CurlyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurlyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739E01C12CB55127008C8BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739E01C32CB55127008C8BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		739E01DD2CB9489A008C8BB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7371BA082CE6118000853BDB /* MarTableViewController.swift */,
 				7371BA062CE5270600853BDB /* ImageListViewController.swift */,
 				739E01C52CB55127008C8BB6 /* ViewController.swift */,
 				7371B9B42CD91B0F00853BDB /* FindImageViewController.swift */,
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				739E01E22CB95524008C8BB6 /* ShadowView.swift */,
+				7371BA0A2CE621A000853BDB /* CustomDogCell.swift */,
 				739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */,
 				739E01E42CB95F62008C8BB6 /* Constants.swift */,
 			);
@@ -221,6 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7371BA092CE6118000853BDB /* MarTableViewController.swift in Sources */,
+				7371BA0B2CE621A000853BDB /* CustomDogCell.swift in Sources */,
 				739E01DA2CB589A9008C8BB6 /* DogDataManager.swift in Sources */,
 				739E01D62CB58933008C8BB6 /* DogModel.swift in Sources */,
 				739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */,

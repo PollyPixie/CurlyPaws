@@ -11,21 +11,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let dogDataManager = createDogDataManager()
         
-        
-        let imageListViewController = ImageListViewController()
-        imageListViewController.dogDataManager = dogDataManager
+        let marTableViewController = MarTableViewController()
+        marTableViewController.dogDataManager = dogDataManager
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = imageListViewController
+        window?.rootViewController = marTableViewController
         window?.makeKeyAndVisible()
     }
-    
     
     private func createDogDataManager() -> IDogDataManageable {
         let dogManager = DogManager()
