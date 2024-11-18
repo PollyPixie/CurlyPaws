@@ -9,10 +9,14 @@ import UIKit
 
 class CustomDogCell: UITableViewCell {
     
+    var action: ((UITableViewCell) -> ())?
+    
     private let dogImageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     private let markButton =  UIButton()
+    
+    private var toggleMark = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,14 +28,24 @@ class CustomDogCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(dogModel: DogModel) {
-        dogImageView.image = UIImage(named: dogModel.imageName)
-        titleLabel.text = dogModel.imageName
-        descriptionLabel.text = dogModel.description
-        let mark = dogModel.isMark ? "checkmark.square.fill" : "square"
-        markButton.setImage(UIImage(systemName: mark), for: .normal)
-    }
+    @objc
+     private func actionButtonTapped() {
+         toggleMark.toggle()
+         let mark = toggleMark ? "checkmark.square.fill" : "checkmark.square"
+         markButton.setImage(UIImage(systemName: mark), for: .normal)
+         action?(self)
+ }
     
+    func configure(dogModel: DogModel) {
+            dogImageView.image = UIImage(named: dogModel.imageName)
+            titleLabel.text = dogModel.imageName
+            descriptionLabel.text = dogModel.dogDescription
+            
+            let mark = dogModel.isMark ? "checkmark.square.fill" : "checkmark.square"
+            markButton.setImage(UIImage(systemName: mark), for: .normal)
+            
+            markButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
 }
 
     // MARK: - Setting
@@ -54,7 +68,6 @@ class CustomDogCell: UITableViewCell {
             }
         }
     }
-    
     
     // MARK: - Settings Views
     private extension CustomDogCell {

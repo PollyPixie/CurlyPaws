@@ -18,6 +18,7 @@ protocol IDogDataManageable {
     func findImage(by name: String) -> DogModel?
     func toggleMark(at index: Int)
     func getMarkedDogs() -> [DogModel]
+    func toggleMarkForDog(_ dog: DogModel)
 }
 
 class DogDataManager { 
@@ -73,6 +74,12 @@ extension DogDataManager: IDogDataManageable {
             }
         }
         return isMarkedDogs
+    }
+    
+    func toggleMarkForDog(_ dog: DogModel) {
+        if let index = dogs.firstIndex(of: dog) {
+            dogs[index].isMark.toggle()
+        }
     }
 }
 
