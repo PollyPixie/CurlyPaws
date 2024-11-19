@@ -16,6 +16,7 @@
 		7371BA072CE5270600853BDB /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA062CE5270600853BDB /* ImageListViewController.swift */; };
 		7371BA092CE6118000853BDB /* MarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA082CE6118000853BDB /* MarTableViewController.swift */; };
 		7371BA0B2CE621A000853BDB /* CustomDogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA0A2CE621A000853BDB /* CustomDogCell.swift */; };
+		7371BA0D2CED28FB00853BDB /* CustomDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371BA0C2CED28FB00853BDB /* CustomDogView.swift */; };
 		739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C12CB55127008C8BB6 /* AppDelegate.swift */; };
 		739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C32CB55127008C8BB6 /* SceneDelegate.swift */; };
 		739E01C62CB55127008C8BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E01C52CB55127008C8BB6 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		7371BA062CE5270600853BDB /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		7371BA082CE6118000853BDB /* MarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarTableViewController.swift; sourceTree = "<group>"; };
 		7371BA0A2CE621A000853BDB /* CustomDogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDogCell.swift; sourceTree = "<group>"; };
+		7371BA0C2CED28FB00853BDB /* CustomDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDogView.swift; sourceTree = "<group>"; };
 		739E01BE2CB55127008C8BB6 /* CurlyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurlyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739E01C12CB55127008C8BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739E01C32CB55127008C8BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				739E01E22CB95524008C8BB6 /* ShadowView.swift */,
 				7371BA0A2CE621A000853BDB /* CustomDogCell.swift */,
+				7371BA0C2CED28FB00853BDB /* CustomDogView.swift */,
 				739E01DB2CB6C45F008C8BB6 /* CustomButton.swift */,
 				739E01E42CB95F62008C8BB6 /* Constants.swift */,
 			);
@@ -242,6 +245,7 @@
 				739E01DC2CB6C45F008C8BB6 /* CustomButton.swift in Sources */,
 				7371B9B52CD91B0F00853BDB /* FindImageViewController.swift in Sources */,
 				739E01C22CB55127008C8BB6 /* AppDelegate.swift in Sources */,
+				7371BA0D2CED28FB00853BDB /* CustomDogView.swift in Sources */,
 				739E01C42CB55127008C8BB6 /* SceneDelegate.swift in Sources */,
 				7371B9B12CD40B9A00853BDB /* UIView+Constraints.swift in Sources */,
 				739E01E52CB95F62008C8BB6 /* Constants.swift in Sources */,

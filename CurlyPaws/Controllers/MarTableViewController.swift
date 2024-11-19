@@ -15,6 +15,8 @@ class MarTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(cgColor: CGColor(red: 247/255, green: 246/255, blue: 206/255, alpha: 1))
+        tableView.separatorStyle = .none
         tableView.register(CustomDogCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
@@ -32,6 +34,9 @@ class MarTableViewController: UITableViewController {
             
             cell.action = actionButton
         }
+        
+        cell.selectionStyle = .none
+        
         return cell
     }
     
