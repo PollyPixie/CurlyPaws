@@ -29,22 +29,23 @@ class CustomDogCell: UITableViewCell {
     }
     
     @objc
-     private func actionButtonTapped() {
-         toggleMark.toggle()
-         let mark = toggleMark ? "checkmark.square.fill" : "checkmark.square"
-         markButton.setImage(UIImage(systemName: mark), for: .normal)
-         action?(self)
- }
+    private func actionButtonTapped() {
+        toggleMark.toggle()
+        let mark = toggleMark ? "checkmark.square.fill" : "checkmark.square"
+        markButton.setImage(UIImage(systemName: mark), for: .normal)
+        action?(self)
+    }
     
     func configure(dogModel: DogModel) {
-            dogImageView.image = UIImage(named: dogModel.imageName)
-            titleLabel.text = dogModel.imageName
-            descriptionLabel.text = dogModel.dogDescription
-            
-            let mark = dogModel.isMark ? "checkmark.square.fill" : "checkmark.square"
-            markButton.setImage(UIImage(systemName: mark), for: .normal)
-            
-            markButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+        dogImageView.image = UIImage(named: dogModel.imageName)
+        titleLabel.text = dogModel.imageName
+        descriptionLabel.text = dogModel.dogDescription
+        toggleMark = dogModel.isMark
+        
+        let mark = dogModel.isMark ? "checkmark.square.fill" : "checkmark.square"
+        markButton.setImage(UIImage(systemName: mark), for: .normal)
+        
+        markButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }
 }
 

@@ -30,16 +30,18 @@ class MarTableViewController: UITableViewController {
         if let dog = dogDataManager?.getMarkedDogs()[indexPath.row] {
             cell.configure(dogModel: dog)
             
-            cell.action = { cell in
-                if let indexPath = self.tableView.indexPath(for: cell ),
-                   let dog = self.dogDataManager?.getMarkedDogs()[indexPath.row],
-                   let manager = self.dogDataManager {
-                    manager.toggleMarkForDog(dog)
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                }
-            }
+            cell.action = actionButton
         }
         return cell
+    }
+    
+    private func actionButton(cell: UITableViewCell) {
+        if let indexPath = self.tableView.indexPath(for: cell ),
+           let dog = self.dogDataManager?.getMarkedDogs()[indexPath.row],
+           let manager = self.dogDataManager {
+            manager.toggleMarkForDog(dog)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
